@@ -77,7 +77,7 @@
                                 <input type="text" placeholder="Číslo smlouvy">
                                 <input type="text" placeholder="Získatel">
                                 <input type="text" placeholder="Pojistník">
-                                <input type="date" placeholder="Vytvořeno" title="Vytvořeno dne">
+                                <input type="text" placeholder="Vytvořeno" onfocus="(this.type='date')" onblur="(this.type='text')">
                                 <select>
                                     <option selected disabled>Stav</option>
                                     <option>xxxx</option>
@@ -177,7 +177,7 @@
             </div>
         </section>
 
-        <div class="section pagination">
+        <section class="section pagination">
             <div class="container">
                 <div class="pagination-wrapper">
                     <div class="pagination-perPage">
@@ -235,7 +235,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
     
     <script src="js/jquery-3.6.1.min.js"></script>

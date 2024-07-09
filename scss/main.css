@@ -454,6 +454,14 @@ input::-webkit-inner-spin-button {
   color: #000;
   font-weight: 700;
 }
+.body p a {
+  color: #0a74af;
+  text-decoration: none;
+}
+.body p a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.125rem;
+}
 .body .section {
   padding: 3rem 0;
 }
@@ -479,6 +487,14 @@ input::-webkit-inner-spin-button {
 @media (max-width: 768px) {
   .body .section-header {
     margin-bottom: 2rem;
+  }
+}
+.body .section-footer {
+  margin-top: 3rem;
+}
+@media (max-width: 768px) {
+  .body .section-footer {
+    margin-top: 2rem;
   }
 }
 
@@ -632,10 +648,10 @@ input::-webkit-inner-spin-button {
   align-items: center;
 }
 .form-item-divided .col-12 > div label {
-  margin: 0 1rem 0 0.35rem;
+  margin: 0 1rem 0 0.28rem;
 }
 .form-item-divided .col-12:not(:last-child) > div {
-  margin-right: 0.65rem;
+  margin-right: 0.72rem;
 }
 .form-item-pretext {
   position: relative;
@@ -691,6 +707,12 @@ input::-webkit-inner-spin-button {
     margin-bottom: 0.5rem;
   }
 }
+.form-section-hidden:not(.active) .form-item:first-child {
+  margin-bottom: 0;
+}
+.form-section-hidden:not(.active) .form-item:not(:first-child) {
+  display: none;
+}
 .form-section:not(:first-child) {
   padding-top: 2.5rem;
 }
@@ -724,10 +746,10 @@ input::-webkit-inner-spin-button {
 }
 .form-section.two-col > div {
   margin: 0;
-  width: 40%;
+  width: 45%;
 }
 .form-section.two-col > div .form-label {
-  max-width: 14.375rem;
+  max-width: 16.5625rem;
 }
 @media (max-width: 1475px) {
   .form-section.two-col > div {
@@ -742,7 +764,7 @@ input::-webkit-inner-spin-button {
 .form label {
   cursor: pointer;
 }
-.form input[type=text], .form input[type=number], .form input[type=file], .form input[type=email], .form input[type=date], .form select {
+.form input[type=text], .form input[type=number], .form input[type=file], .form input[type=password], .form input[type=email], .form input[type=date], .form select {
   align-content: center;
   width: 100%;
   max-width: 100%;
@@ -755,8 +777,23 @@ input::-webkit-inner-spin-button {
   color: #0a74af;
 }
 @media (min-width: 1200px) {
-  .form input[type=text].desktop-half, .form input[type=number].desktop-half, .form input[type=file].desktop-half, .form input[type=email].desktop-half, .form input[type=date].desktop-half, .form select.desktop-half {
+  .form input[type=text].desktop-half, .form input[type=number].desktop-half, .form input[type=file].desktop-half, .form input[type=password].desktop-half, .form input[type=email].desktop-half, .form input[type=date].desktop-half, .form select.desktop-half {
     width: 50%;
+  }
+}
+.form select {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
+  background-image: url("../img/icon/icon-dropdown.svg");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+}
+@media (max-width: 576px) {
+  .form select {
+    background-position: right 1.25rem center;
   }
 }
 .form-radiorow {
@@ -764,12 +801,18 @@ input::-webkit-inner-spin-button {
   align-items: center;
   gap: 1rem;
 }
+.form-radiorow br {
+  display: none;
+}
 .form-checkboxrow {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 0.75rem 2rem;
   font-weight: 600;
+}
+.form-checkboxrow br {
+  display: none;
 }
 @media (max-width: 576px) {
   .form-checkboxrow {
@@ -1027,7 +1070,7 @@ input::-webkit-inner-spin-button {
   align-items: center;
   gap: 0.75rem;
   border-radius: 6.25rem;
-  text-decoration: none;
+  text-decoration: none !important;
   border: 0.125rem solid transparent;
   transition-duration: 0.15s;
   width: -moz-fit-content;
