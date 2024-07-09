@@ -1,0 +1,8 @@
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@function rem($pxval, $base: 16) {
+    @return ($pxval / $base) * 1rem;
+}

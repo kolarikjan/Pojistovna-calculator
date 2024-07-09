@@ -1,0 +1,83 @@
+
+.navbar-toggler {
+    padding: 0;
+    box-shadow: none !important;
+    &, .animated-icon span {
+    transition: background-color 0.25s;
+    }
+    &:hover, &.open {
+        .animated-icon span {
+            background-color: $highlight-color-blue;
+        }
+    }
+    .animated-icon {
+        width: 30px;
+        height: 30px;
+        position: relative;
+        margin: 0px;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        cursor: pointer;
+        -webkit-transition: .5s ease-in-out;
+        -moz-transition: .5s ease-in-out;
+        -o-transition: .5s ease-in-out;
+        transition: .5s ease-in-out;
+        display: block;
+        span {
+            display: block;
+            position: absolute;
+            height: 4px;
+            width: 100%;
+            border-radius: 0;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+            background: $primary-color;
+            &:nth-child(1) {
+                top: 2px;
+            }
+            &:nth-child(2) {
+                top: 13px;
+            }
+            &:nth-child(3) {
+                top: 24px;
+            }
+        }
+        @media (max-width: $md) {
+            width: 27px;
+            height: 27px;
+            span {
+                height: 3px;
+                &:nth-child(2) {
+                    top: 12px;
+                }
+                &:nth-child(3) {
+                    top: 22px;
+                }
+            }
+        }
+    }
+    &.open .animated-icon span {
+        &:nth-child(1) {
+            top: 13px;
+            transform: rotate(135deg);
+        }
+        &:nth-child(2) {
+            opacity: 0;
+            left: -20px;
+        }
+        &:nth-child(3) {
+            top: 13px;
+            transform: rotate(-135deg);
+        }
+        
+        @media (max-width: $md) {
+            &:nth-child(1), &:nth-child(3) {
+                top: 12px;
+            }
+        }
+    }
+}

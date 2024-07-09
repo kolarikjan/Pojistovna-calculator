@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <!-- DEFAULTS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HVP | Vytvoření kalkulace</title>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/ico">
+    <!-- STYLE -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/fancybox.css"> 
+    <link rel="stylesheet" href="scss/main.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="header-logo">
+                    <a href="#">
+                        <img src="img/logo.svg" alt="logo" class="img-fluid">
+                    </a>
+                </div>
+                <ul class="header-menu">
+                    <li>
+                        <a href="#">
+                            <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 22" width="17" height="22"><path id="-e-icon-document" fill-rule="evenodd" class="s0" d="m17 19h-14v-19h9.4l4.6 4.6zm-5-14h2.6l-2.6-2.6zm3 2h-5v-5h-5v15h10zm-13-3v16h11v2h-13v-18z"/></svg>
+                            <span>Smlouvy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22" width="22" height="22"><path id="-e-icon-settings" fill-rule="evenodd" class="s0" d="m15.9 10h2.1v2h-2.1q-0.2 1-0.7 1.8l1.5 1.5-1.5 1.4-1.5-1.5q-0.7 0.5-1.7 0.7v2.1h-2v-2.1q-1-0.2-1.8-0.7l-1.5 1.5-1.4-1.4 1.5-1.5q-0.5-0.8-0.7-1.8h-2.1v-2h2.1q0.2-1 0.7-1.8l-1.5-1.5 1.4-1.4 1.5 1.5q0.8-0.5 1.8-0.7v-2.1h2v2.1q1 0.2 1.7 0.7l1.5-1.5 1.5 1.4-1.5 1.5q0.5 0.8 0.7 1.8zm-1.9 1c0-1.7-1.4-3-3-3-1.7 0-3 1.3-3 3 0 1.7 1.3 3 3 3 1.6 0 3-1.3 3-3zm8 0c0 6.1-5 11-11 11-6.1 0-11-4.9-11-11 0-6.1 4.9-11 11-11 6 0 11 4.9 11 11zm-2 0c0-5-4.1-9-9-9-5 0-9 4-9 9 0 4.9 4 9 9 9 4.9 0 9-4.1 9-9z"/></svg>
+                            <span>Nastavení</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22" width="22" height="22"><path id="-e-icon-logout" class="s0" d="m19 0h-16c-1.7 0-3 1.3-3 3v5h2v-5c0-0.6 0.4-1 1-1h16c0.6 0 1 0.4 1 1v16c0 0.6-0.4 1-1 1h-16c-0.6 0-1-0.4-1-1v-4.9h-2v4.9c0 1.7 1.3 3 3 3h16c1.7 0 3-1.3 3-3v-16c0-1.7-1.3-3-3-3zm-19 12h9.7l-2.4 2.4 1.4 1.4 4.8-4.8-4.8-4.7-1.4 1.4 2.3 2.3h-9.6z"/></svg>
+                            <span>Odhlásit se</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="body">
+        <section class="xtable section ignore-first">
+            <div class="container">
+                <div class="section-header">
+                    <h1>Dílčí rozpracované kalkulace, resp. dílčí smlouvy</h2>
+                </div>
+                <div class="section-body">
+                    <div class="xtable-inner">
+                        <div class="xtable-header">
+                            <div class="xtable-row">
+                                <div class="xtable-row-main">
+                                    <p>Č.</p>
+                                    <p>Dílčí smlouva</p>
+                                    <p>Registrační značka</p>
+                                    <p>Kategorie</p>
+                                </div>
+                                <div class="xtable-row-prices">
+                                    <p>Pojistné POV</p>
+                                    <p>Pojistné HAV</p>
+                                    <p>Pojistné připojištění</p>
+                                    <p>Pojistné asistence</p>
+                                    <p>Pojistné celk. před slevou</p>
+                                    <p>Pojistné celk. po slevě</p>
+                                </div>
+                                <div class="xtable-row-other">
+                                    <p>Počátek</p>
+                                    <p>Ukončena</p>
+                                    <p>Stav</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="xtable-body">
+                            <div class="xtable-row">
+                                <div class="xtable-row-main">
+                                    <p data-title="Č.:"><span>1.</span></p>
+                                    <p data-title="Dílčí smlouva:"><span>SD123123</span></p>
+                                    <p data-title="Registrační značka:"><span>1AP5665</span></p>
+                                    <p data-title="Kategorie:" class="xtable-category"><span>Osobní automobil 66-80KW</span></p>
+                                </div>
+                                <div class="xtable-row-prices">
+                                    <p data-title="Pojistné POV:"><span>5 500 Kč</span></p>
+                                    <p data-title="Pojistné HAV:"><span>12 000 Kč</span></p>
+                                    <p data-title="Pojistné připojištění:"><span>4 500 Kč</span></p>
+                                    <p data-title="Pojistné asistence:"><span>1 000 Kč</span></p>
+                                    <p data-title="Pojistné celk. po slevě:"><span>22 000 Kč</span></p>
+                                    <p data-title="Pojistné celk. po slevě:"><span>18 000 Kč</span></p>
+                                </div>
+                                <div class="xtable-row-other">
+                                    <p data-title="Počátek:"><span>01.04.2024</span></p>
+                                    <p data-title="Ukončena:"><span>01.04.2024</span></p>
+                                    <p data-title="Stav:"><span>Rozpracováno</span></p>
+                                    <div class="xtable-icons">
+                                        <a href="#">
+                                            <div class="xtable-icons-item">
+                                                <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17" width="17" height="17"><path id="-e-icon-edit" fill-rule="evenodd" class="s0" d="m0.3 16.7h4.4l11.8-11.8-4.4-4.4-11.8 11.8zm1.7-1.7v-2l2 2zm1.2-3.2l7-6.9 2.1 2-7 7zm11.1-6.9l-0.9 0.9-2.1-2.1 0.9-0.9z"/></svg>
+                                            </div>
+                                            <div class="d-xxl-none">Upravit</div>
+                                        </a>    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="xtable-row">
+                                <div class="xtable-row-main">
+                                    <p data-title="Č.:"><span>1.</span></p>
+                                    <p data-title="Dílčí smlouva:"><span>SD123123</span></p>
+                                    <p data-title="Registrační značka:"><span>1AP5665</span></p>
+                                    <p data-title="Kategorie:" class="xtable-category"><span>Osobní automobil 66-80KW</span></p>
+                                </div>
+                                <div class="xtable-row-prices">
+                                    <p data-title="Pojistné POV:"><span>5 500 Kč</span></p>
+                                    <p data-title="Pojistné HAV:"><span>12 000 Kč</span></p>
+                                    <p data-title="Pojistné připojištění:"><span>4 500 Kč</span></p>
+                                    <p data-title="Pojistné asistence:"><span>1 000 Kč</span></p>
+                                    <p data-title="Pojistné celk. po slevě:"><span>22 000 Kč</span></p>
+                                    <p data-title="Pojistné celk. po slevě:"><span>18 000 Kč</span></p>
+                                </div>
+                                <div class="xtable-row-other">
+                                    <p data-title="Počátek:"><span>01.04.2024</span></p>
+                                    <p data-title="Ukončena:"><span>01.04.2024</span></p>
+                                    <p data-title="Stav:"><span>Rozpracováno</span></p>
+                                    <div class="xtable-icons">
+                                        <a href="#">
+                                            <div class="xtable-icons-item">
+                                                <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17" width="17" height="17"><path id="-e-icon-edit" fill-rule="evenodd" class="s0" d="m0.3 16.7h4.4l11.8-11.8-4.4-4.4-11.8 11.8zm1.7-1.7v-2l2 2zm1.2-3.2l7-6.9 2.1 2-7 7zm11.1-6.9l-0.9 0.9-2.1-2.1 0.9-0.9z"/></svg>
+                                            </div>
+                                            <div class="d-xxl-none">Upravit</div>
+                                        </a>    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="xtable-row">
+                                <div class="xtable-row-main">
+                                    <p data-title="Č.:"><span>1.</span></p>
+                                    <p data-title="Dílčí smlouva:"><span>SD123123</span></p>
+                                    <p data-title="Registrační značka:"><span>1AP5665</span></p>
+                                    <p data-title="Kategorie:" class="xtable-category"><span>Osobní automobil 66-80KW</span></p>
+                                </div>
+                                <div class="xtable-row-prices">
+                                    <p data-title="Pojistné POV:"><span>5 500 Kč</span></p>
+                                    <p data-title="Pojistné HAV:"><span>12 000 Kč</span></p>
+                                    <p data-title="Pojistné připojištění:"><span>4 500 Kč</span></p>
+                                    <p data-title="Pojistné asistence:"><span>1 000 Kč</span></p>
+                                    <p data-title="Pojistné celk. po slevě:"><span>22 000 Kč</span></p>
+                                    <p data-title="Pojistné celk. po slevě:"><span>18 000 Kč</span></p>
+                                </div>
+                                <div class="xtable-row-other">
+                                    <p data-title="Počátek:"><span>01.04.2024</span></p>
+                                    <p data-title="Ukončena:"><span>01.04.2024</span></p>
+                                    <p data-title="Stav:"><span>Rozpracováno</span></p>
+                                    <div class="xtable-icons">
+                                        <a href="#">
+                                            <div class="xtable-icons-item">
+                                                <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17" width="17" height="17"><path id="-e-icon-edit" fill-rule="evenodd" class="s0" d="m0.3 16.7h4.4l11.8-11.8-4.4-4.4-11.8 11.8zm1.7-1.7v-2l2 2zm1.2-3.2l7-6.9 2.1 2-7 7zm11.1-6.9l-0.9 0.9-2.1-2.1 0.9-0.9z"/></svg>
+                                            </div>
+                                            <div class="d-xxl-none">Upravit</div>
+                                        </a>    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="xtable-row">
+                                <div class="xtable-row-main">
+                                    <p data-title="Č.:"><span>1.</span></p>
+                                    <p data-title="Dílčí smlouva:"><span>SD123123</span></p>
+                                    <p data-title="Registrační značka:"><span>1AP5665</span></p>
+                                    <p data-title="Kategorie:" class="xtable-category"><span>Osobní automobil 66-80KW</span></p>
+                                </div>
+                                <div class="xtable-row-prices">
+                                    <p data-title="Pojistné POV:"><span>5 500 Kč</span></p>
+                                    <p data-title="Pojistné HAV:"><span>12 000 Kč</span></p>
+                                    <p data-title="Pojistné připojištění:"><span>4 500 Kč</span></p>
+                                    <p data-title="Pojistné asistence:"><span>1 000 Kč</span></p>
+                                    <p data-title="Pojistné celk. po slevě:"><span>22 000 Kč</span></p>
+                                    <p data-title="Pojistné celk. po slevě:"><span>18 000 Kč</span></p>
+                                </div>
+                                <div class="xtable-row-other">
+                                    <p data-title="Počátek:"><span>01.04.2024</span></p>
+                                    <p data-title="Ukončena:"><span>01.04.2024</span></p>
+                                    <p data-title="Stav:"><span>Rozpracováno</span></p>
+                                    <div class="xtable-icons">
+                                        <a href="#">
+                                            <div class="xtable-icons-item">
+                                                <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17" width="17" height="17"><path id="-e-icon-edit" fill-rule="evenodd" class="s0" d="m0.3 16.7h4.4l11.8-11.8-4.4-4.4-11.8 11.8zm1.7-1.7v-2l2 2zm1.2-3.2l7-6.9 2.1 2-7 7zm11.1-6.9l-0.9 0.9-2.1-2.1 0.9-0.9z"/></svg>
+                                            </div>
+                                            <div class="d-xxl-none">Upravit</div>
+                                        </a>    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="xtable-footer">
+                            <form class="form">
+                                <div class="xtable-footer-inner">
+                                    <p><b>Import z Excelu</b></p>
+                                    <div class="xtable-footer-import">
+                                        <input type="file">
+                                        <button type="submit" class="button button-blue">
+                                            Importovat
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/fancybox.umd.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/javascript.js"></script>
+
+</body>
+</html>

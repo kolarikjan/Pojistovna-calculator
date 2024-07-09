@@ -1,0 +1,276 @@
+.footer {
+    background-color: $darkSection-color;
+    &-top {
+        padding: 1.25rem 0;
+        border-bottom: rem(1) solid $border-color-light;
+        @media (max-width: $xxl) {
+            padding: 2rem 0;
+        }
+        &-wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem 0;
+            @media (max-width: $xxl) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @media (max-width: $md) {
+                grid-template-columns: 1fr;
+            }
+        }
+        h3 {
+            font-size: rem(18);
+            line-height: rem(28);
+            color: $primary-color-light;
+            font-weight: 600;
+            margin-bottom: 0;
+        }
+        &-socials {
+            gap: 1.75rem;
+            &, ul {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+            }
+            svg {
+                height: 24px;
+                aspect-ratio: 1/1;
+                object-fit: scale-down;
+            }
+            ul {
+                gap: .75rem;
+                a {
+                    border-radius: 50%;
+                    aspect-ratio: 1/1;
+                    width: rem(35);
+                    @include flexCenter();
+                    transition: .25s;
+                    svg {
+                        &, path {
+                            transition: .25s;
+                            fill: $secondary-color-light;
+                        }
+                    }
+                    &:hover {
+                        background-color: $secondary-color-light;
+                        svg {
+                            &, path {
+                                fill: $darkSection-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &-link {
+            @include flexCenter();
+            flex-direction: column;
+            gap: 1.25rem;
+            @media (max-width: $md) {
+                align-items: flex-start;
+            }
+            a {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                text-decoration: none;
+                color: $primary-color-light;
+                &:hover {
+                    text-decoration: underline;
+                    text-decoration-thickness: rem(2);
+                    text-underline-offset: rem(3);
+                }
+                svg {
+                    fill: $primary-color-light;
+                }
+            }
+        }
+        &-newsletter {
+            padding-left: 4rem;
+            @media (max-width: $xxl) {
+                grid-column: span 2;
+                width: 50%;
+                padding-left: 0;
+            }
+            @media (max-width: $xl) {
+                width: 80%;
+            }
+            @media (max-width: $md) {
+                grid-column: 1;
+                width: 100%;
+            }
+            h3 {
+                margin-bottom: .75rem;
+            }
+        }
+    }
+    &-main {
+        padding: 3rem 0;
+        border-bottom: rem(1) solid $border-color-light;
+        &-wrapper {
+            display: grid;
+            grid-template-columns: 2.75fr 1fr;
+            gap: 2rem 0;
+            @media (max-width: $xxl) {
+                grid-template-columns: 1fr;
+            }
+        }
+        h3 {
+            font-size: rem(14);
+            letter-spacing: rem(1);
+            line-height: rem(30);
+            text-transform: uppercase;
+            color: $primary-color-light;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        &-menu {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3fr 2fr;
+            padding-right: 5rem;
+            gap: 2rem 0;
+            @media (max-width: $xxl) {
+                padding-right: 0;
+            }
+            @media (max-width: $md) {
+                grid-template-columns: 1fr;
+            }
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: .25rem;
+            }
+            a {
+                font-size: rem(14);
+                line-height: rem(28);
+                color: $secondary-color-light;
+                font-weight: 500;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        &-logos {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                gap: 1.75rem;
+            }
+        }
+    }
+    &-bottom {
+        padding: 2rem 0;
+        &-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem 0;
+            @media (max-width: $xxl) {
+                grid-template-columns: 1fr;
+            }
+        }
+        &-awards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            @media (max-width: $xxl) {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: stretch;
+            }
+            &-item {
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+            &-bonus {
+                padding: 1rem;
+                border-radius: $button-radius;
+                background-color: lighten($darkSection-color, 10%);
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                gap: 1rem;
+                transition: .25s;
+                &-iconbox {
+                    flex-shrink: 0;
+                    svg {
+                        fill: $highlight-color;
+                        transition: .25s;
+                    }
+                }
+                &-text {
+                    h3 {
+                        color: $highlight-color;
+                        font-size: rem(26);
+                        line-height: rem(32);
+                        font-weight: 700;
+                        margin-bottom: .35rem;
+                        transition: .25s;
+                    }
+                    p {  
+                        color: $primary-color-light;
+                        font-size: rem(15);
+                        line-height: rem(20);
+                        font-weight: 500;
+                    }
+                }
+                &:hover {
+                    background-color: $highlight-color;
+                    svg {
+                        fill: $primary-color-light !important;
+                    }
+                    h3 {
+                        color: $primary-color-light !important;
+                    }
+                }
+            }
+        }
+        &-copyright {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            @media (max-width: $xxl) {
+                justify-content: flex-start;
+            }
+            p {
+                display: flex;
+                flex-wrap: wrap;
+                font-size: rem(14);
+                line-height: rem(28);
+                color: $secondary-color-light;
+                font-weight: 500;
+                text-align: right;
+                @media (max-width: $xxl) {
+                    text-align: left;
+                }
+                a {
+                    color: $secondary-color-light;
+                    text-decoration: none;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+                span {
+                    &:not(:last-child) {
+                        &::after {
+                            content: "|";
+                            padding: 0 .25rem;
+                        }
+                    }
+                }
+                @media (max-width: $xxl) {
+                    flex-direction: column;
+                    span::after {
+                        content: none !important;
+                    }
+                }
+            }
+        }
+    }
+}

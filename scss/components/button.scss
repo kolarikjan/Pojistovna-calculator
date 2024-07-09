@@ -1,0 +1,40 @@
+.button {
+    font-size: rem(16);
+    line-height: rem(22);
+    color: $secondary-color;
+    font-weight: 700;
+    padding: 1rem 1.75rem;
+    @include flexCenter();
+    gap: .75rem;
+    border-radius: rem(100);
+    text-decoration: none;
+    border: rem(2) solid transparent;
+    transition-duration: .15s;
+    width: fit-content;
+    svg {
+        transition-duration: .15s;
+        fill: $secondary-color;
+    }
+    &-red {
+        background-color: $highlight-color-red;
+        border-color: $highlight-color-red;
+        &:hover {
+            svg {
+                fill: $highlight-color-red;
+            }
+            background-color: $secondary-color;
+            color: $highlight-color-red;
+        }
+    }
+    &-blue {
+        background-color: $highlight-color-blue;
+        border-color: $highlight-color-blue;
+        &:hover {
+            svg {
+                fill: $highlight-color-blue;
+            }
+            background-color: $secondary-color;
+            color: $highlight-color-blue;
+        }
+    }
+}

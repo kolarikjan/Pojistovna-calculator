@@ -1,0 +1,72 @@
+.pagination {
+    &-wrapper {
+        @include flexCenter();
+        flex-wrap: wrap;
+        gap: 2rem 4rem;
+        @media (max-width: $lg) {
+            flex-direction: column-reverse;
+        }
+    }
+    &-perPage {
+        background-color: $section-color-blue;
+        border-radius: 2.5rem;
+        padding: 1rem 2.5rem;
+        @include flexCenter();
+        flex-wrap: wrap;
+        gap: .25rem 1rem;
+        ul {
+            @include flexCenter();
+            font-weight: 700;
+            font-size: rem(16);
+            line-height: rem(22);
+            li {
+                &:not(:last-child) {
+                    &::after {
+                        padding: 0 .35rem 0 .2rem;
+                        content: "|";
+                    }
+                }
+                a {
+                    color: $primary-color;
+                    text-decoration: none;
+                    transition-duration: .15s;
+                    &:hover {
+                        color: $highlight-color-blue;
+                    }
+                }
+            }
+        }
+    }
+    &-pages {
+        ul {
+            @include flexCenter();
+            gap: .5rem;
+            a {
+                width: rem(29);
+                line-height: rem(28);
+                aspect-ratio: 1/1;
+                @include flexCenter();
+                border: rem(1) solid $border-color;
+                transition-duration: .15s;
+                color: $primary-color;
+                border-radius: 50%;
+                text-decoration: none;
+                &:hover, &.active {
+                    border-color: $section-color-blue;
+                    background-color: $section-color-blue;
+                }
+                &.arrow {
+                    border-color: $highlight-color-blue;
+                    background-color: $highlight-color-blue;
+                }
+            }
+            li:first-child {
+                a.arrow {
+                    img, svg {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+    }
+}

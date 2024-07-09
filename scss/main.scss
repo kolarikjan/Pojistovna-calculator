@@ -1,0 +1,40 @@
+/* 
+Theme name: Starfishing
+Author: Jan Kolařík
+Author's url: www.kolarikjan.cz
+*/
+
+// Defaults
+@import "defaults/variables";
+@import "defaults/resets";
+@import "defaults/functions";
+
+// Layouts
+@import "layout/header";
+@import "layout/body";
+
+// Page Components
+@import "components/hamburger";
+@import "components/form";
+@import "components/button";
+@import "components/table";
+@import "components/pagination";
+
+
+body {
+    font-family: $font;
+    overflow-x: hidden;
+}
+::selection {
+    background: $highlight-color-blue;
+    color: $secondary-color;
+}
+::-moz-selection {
+    background: $highlight-color-blue;
+    color: $secondary-color;
+}
+@media (min-width: $xxl) {
+    .container {
+        max-width: 1424px;
+    }
+}
