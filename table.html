@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <!-- DEFAULTS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HVP | Vytvoření kalkulace</title>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/ico">
+    <!-- STYLE -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/fancybox.css"> 
+    <link rel="stylesheet" href="scss/main.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="header-logo">
+                    <a href="#">
+                        <img src="img/logo.svg" alt="logo" class="img-fluid">
+                    </a>
+                </div>
+                <ul class="header-menu">
+                    <li>
+                        <a href="#">
+                            <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 22" width="17" height="22"><path id="-e-icon-document" fill-rule="evenodd" class="s0" d="m17 19h-14v-19h9.4l4.6 4.6zm-5-14h2.6l-2.6-2.6zm3 2h-5v-5h-5v15h10zm-13-3v16h11v2h-13v-18z"/></svg>
+                            <span>Smlouvy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22" width="22" height="22"><path id="-e-icon-settings" fill-rule="evenodd" class="s0" d="m15.9 10h2.1v2h-2.1q-0.2 1-0.7 1.8l1.5 1.5-1.5 1.4-1.5-1.5q-0.7 0.5-1.7 0.7v2.1h-2v-2.1q-1-0.2-1.8-0.7l-1.5 1.5-1.4-1.4 1.5-1.5q-0.5-0.8-0.7-1.8h-2.1v-2h2.1q0.2-1 0.7-1.8l-1.5-1.5 1.4-1.4 1.5 1.5q0.8-0.5 1.8-0.7v-2.1h2v2.1q1 0.2 1.7 0.7l1.5-1.5 1.5 1.4-1.5 1.5q0.5 0.8 0.7 1.8zm-1.9 1c0-1.7-1.4-3-3-3-1.7 0-3 1.3-3 3 0 1.7 1.3 3 3 3 1.6 0 3-1.3 3-3zm8 0c0 6.1-5 11-11 11-6.1 0-11-4.9-11-11 0-6.1 4.9-11 11-11 6 0 11 4.9 11 11zm-2 0c0-5-4.1-9-9-9-5 0-9 4-9 9 0 4.9 4 9 9 9 4.9 0 9-4.1 9-9z"/></svg>
+                            <span>Nastavení</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22" width="22" height="22"><path id="-e-icon-logout" class="s0" d="m19 0h-16c-1.7 0-3 1.3-3 3v5h2v-5c0-0.6 0.4-1 1-1h16c0.6 0 1 0.4 1 1v16c0 0.6-0.4 1-1 1h-16c-0.6 0-1-0.4-1-1v-4.9h-2v4.9c0 1.7 1.3 3 3 3h16c1.7 0 3-1.3 3-3v-16c0-1.7-1.3-3-3-3zm-19 12h9.7l-2.4 2.4 1.4 1.4 4.8-4.8-4.8-4.7-1.4 1.4 2.3 2.3h-9.6z"/></svg>
+                            <span>Odhlásit se</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="body">
+        <section class="xtable section ignore-first">
+            <div class="container">
+                <div class="section-body">
+                    <div class="xtable-calculations">
+                        <div class="xtable-inner">
+                            <!-- LEVEL 1 HEADER -->
+                            <div class="xtable-row-calc1 header">	 
+                                <div class="xtable-row-calc1-main">
+                                    <p></p>
+                                    <a href="">Číslo kalkulace rámcové smlouvy</a>
+                                    <a href="">Získatel (jméno PZ)</a>
+                                    <a href="">Číslo PZ</a>
+                                    <a href="">Získatel (jméno PPZ)</a>
+                                    <a href="">Číslo PPZ</a>
+                                    <a href="">Pojistník (jméno)</a>
+                                    <a href="">Pojistník (IČ/RČ)</a>
+                                    <a href="">Vytvořeno</a>
+                                    <a href="">Změněno</a>
+                                    <a href="">Stav</a>
+                                    <a href="">Počátek od</a>
+                                </div>
+                                <div class="xtable-row-calc-controls xtable-controls"></div>
+                            </div> 
+                            <div class="xtable-row-calc1 header" data-protonpass-form=""> 	
+                                <div class="xtable-row-calc1-main">
+                                    <p></p>
+                                    <div class="xtable-row-calc-inputbox cislo-kalkulace">
+                                        <input type="text" placeholder="Číslo kalkulace rámcové smlouvy">
+                                    </div>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <div class="xtable-row-calc-inputbox pocatek">
+                                        <input type="text" placeholder="Po">
+                                        <input type="text" placeholder="Před">
+                                    </div>
+                                </div>
+                                <div class="xtable-row-calc-controls xtable-controls"></div>
+                            </div> 
+                            <!-- LEVEL 1 ITEMS -->
+                            <div class="xtable-row-calc-item level-1">
+                                <div class="xtable-row-calc1 item">	 
+                                    <div class="xtable-row-calc1-main">
+                                        <p><span class="xtable-row-number">1</span></p>
+                                        <p data-title="Číslo kalkulace rámcové smlouvy: ">6697792ce5fc9</p>
+                                        <p data-title="Získatel (jméno PZ): ">Jan Novák</p>
+                                        <p data-title="Číslo PZ: ">93773</p>
+                                        <p data-title="Získatel (jméno PPZ): ">Jan Novák</p>
+                                        <p data-title="Číslo PPZ: ">00001</p>
+                                        <p data-title="Pojistník (jméno): ">John Doe</p>
+                                        <p data-title="Pojistník (IČ/RČ): ">0123654</p>
+                                        <p data-title="Vytvořeno: ">17.07.2024</p>
+                                        <p data-title="Změněno: ">17.07.2024</p>
+                                        <p data-title="Stav: ">Kalkulace</p>
+                                        <p data-title="Počátek od: ">19.06.2024</p>
+                                    </div>
+                                    <div class="xtable-row-calc-controls xtable-controls">
+                                        <a href="">
+                                            <div class="xtable-icons-item">
+                                                <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17" width="17" height="17"><path id="-e-icon-edit" fill-rule="evenodd" class="s0" d="m0.3 16.7h4.4l11.8-11.8-4.4-4.4-11.8 11.8zm1.7-1.7v-2l2 2zm1.2-3.2l7-6.9 2.1 2-7 7zm11.1-6.9l-0.9 0.9-2.1-2.1 0.9-0.9z"></path></svg>
+                                            </div>
+                                        </a>
+                                        <a href="">
+                                            <div class="xtable-icons-item">
+                                                <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 20" width="18" height="20"><path id="-e-icon-copy" fill-rule="evenodd" class="s0" d="m5.5 5.2v-3.1h-3.9v9.4h4.7v1.5h-6.3v-12.4h6.6l3.6 3.5v1.9h-1.6v-0.8zm11.7 14.1h-10.1v-12.5h6.5l3.6 3.6zm-1.6-1.6v-6.2h-3.1v-3.1h-3.9v9.3z"></path></svg>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div> 
+                                <!-- LEVEL 2 -->
+                                <div class="xtable-row-calc-item level-2">
+                                    <div class="xtable-row-calc2 header">	 
+                                        <div class="xtable-row-calc2-main">
+                                            <div class="xtable-row-calc-item-arrows"></div>
+                                            <a href="">Číslo kalkulace dílčí smlouvy</a>
+                                            <a href="">Získatel (jméno PPZ)</a>
+                                            <a href="">Číslo PPZ</a>
+                                            <p>Pojistné (po slevě)</p>
+                                            <a href="">Vytvořeno</a>
+                                            <a href="">Změněno</a>
+                                            <a href="">Stav</a>
+                                            <a href="">Počátek od</a>
+                                        </div>
+                                        <div class="xtable-row-calc-controls xtable-controls"></div>
+                                    </div> 
+                                    <!-- LEVEL 2 ITEMS --> 
+                                    <div class="xtable-row-calc2 item">	 
+                                        <div class="xtable-row-calc2-main">
+                                            <div class="xtable-row-calc-item-arrows"></div>
+                                            <p class="d-lg-none"><span class="xtable-row-number">1</span></p>
+                                            <div data-title="Číslo kalkulace dílčí smlouvy: " class="xtable-row-number-extended">
+                                                <div class="xtable-row-number-inner">
+                                                    <span class="xtable-row-number">1</span>
+                                                </div>
+                                                <span>6697792</span>
+                                            </div>
+                                            <p data-title="Získatel (jméno PPZ): ">Jan Novák</p>
+                                            <p data-title="Číslo PPZ: ">00001</p>
+                                            <p data-title="Pojistné (po slevě): ">9999 Kč</p>
+                                            <p data-title="Vytvořeno: ">17.07.2024</p>
+                                            <p data-title="Změněno: ">17.07.2024</p>
+                                            <p data-title="Stav: ">Kalkulace</p>
+                                            <p data-title="Počátek od: ">19.06.2024</p>
+                                        </div>
+                                        <div class="xtable-row-calc-controls xtable-controls">
+                                            <a href="">
+                                                <div class="xtable-icons-item">
+                                                    <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17" width="17" height="17"><path id="-e-icon-edit" fill-rule="evenodd" class="s0" d="m0.3 16.7h4.4l11.8-11.8-4.4-4.4-11.8 11.8zm1.7-1.7v-2l2 2zm1.2-3.2l7-6.9 2.1 2-7 7zm11.1-6.9l-0.9 0.9-2.1-2.1 0.9-0.9z"></path></svg>
+                                                </div>
+                                            </a>
+                                            <a href="">
+                                                <div class="xtable-icons-item">
+                                                    <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 20" width="18" height="20"><path id="-e-icon-copy" fill-rule="evenodd" class="s0" d="m5.5 5.2v-3.1h-3.9v9.4h4.7v1.5h-6.3v-12.4h6.6l3.6 3.5v1.9h-1.6v-0.8zm11.7 14.1h-10.1v-12.5h6.5l3.6 3.6zm-1.6-1.6v-6.2h-3.1v-3.1h-3.9v9.3z"></path></svg>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div> 
+                                    <!-- LEVEL 3 -->
+                                    <div class="xtable-row-calc-item level-3">
+                                        <div class="xtable-row-calc3 header">	 
+                                            <div class="xtable-row-calc3-main">
+                                                <div class="xtable-row-calc-item-arrows"></div>
+                                                <a href="">Pořadové číslo</a>
+                                                <a href="">RZ</a>
+                                                <a href="">VIN</a>
+                                                <a href="">Číslo TP</a>
+                                                <a href="">Druh vozidla</a>
+                                                <a href="">Značka vozidla</a>
+                                                <a href="">Model vozidla</a>
+                                                <a href="">Rok výroby</a>
+                                                <a href="">Objem motoru</a>
+                                                <a href="">Výkon motoru</a>
+                                                <a href="">Celková hmotnost</a>
+                                                <a href="">Počet sedadel</a>
+                                            </div>
+                                            <div class="xtable-row-calc-controls xtable-controls"></div>
+                                        </div> 
+                                        <!-- LEVEL 2 ITEMS --> 
+                                        <div class="xtable-row-calc3 item">	 
+                                            <div class="xtable-row-calc3-main">
+                                                <div class="xtable-row-calc-item-arrows"></div>
+                                                <p data-title="Pořadové číslo: ">1</p>
+                                                <p data-title="RZ: ">6A05560</p>
+                                                <p data-title="VIN: ">AAAAAAAAAA1234567</p>
+                                                <p data-title="Číslo TP: ">AA112233</p>
+                                                <p data-title="Druh vozidla: ">osobní</p>
+                                                <p data-title="Značka vozidla: ">škoda</p>
+                                                <p data-title="Model vozidla: ">PRDIAQ</p>
+                                                <p data-title="Rok výroby: ">2012</p>
+                                                <p data-title="Objem motoru: ">1750 cm³</p>
+                                                <p data-title="Výkon motoru: ">39 kW</p>
+                                                <p data-title="Celková hmotnost: ">1500 kg</p>
+                                                <p data-title="Počet sedadel: ">5</p>
+                                            </div>
+                                            <div class="xtable-row-calc-controls xtable-controls">
+                                                <a href="">
+                                                    <div class="xtable-icons-item">
+                                                        <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17" width="17" height="17"><path id="-e-icon-edit" fill-rule="evenodd" class="s0" d="m0.3 16.7h4.4l11.8-11.8-4.4-4.4-11.8 11.8zm1.7-1.7v-2l2 2zm1.2-3.2l7-6.9 2.1 2-7 7zm11.1-6.9l-0.9 0.9-2.1-2.1 0.9-0.9z"></path></svg>
+                                                    </div>
+                                                </a>
+                                                <a href="">
+                                                    <div class="xtable-icons-item">
+                                                        <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 20" width="18" height="20"><path id="-e-icon-copy" fill-rule="evenodd" class="s0" d="m5.5 5.2v-3.1h-3.9v9.4h4.7v1.5h-6.3v-12.4h6.6l3.6 3.5v1.9h-1.6v-0.8zm11.7 14.1h-10.1v-12.5h6.5l3.6 3.6zm-1.6-1.6v-6.2h-3.1v-3.1h-3.9v9.3z"></path></svg>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div> 
+                                    </div> 
+                                </div> 
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+        </section>
+        	 	 	 	
+    </main>
+    
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/fancybox.umd.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/javascript.js"></script>
+
+</body>
+</html>
