@@ -6,7 +6,7 @@
         align-items: center;
         justify-content: space-between;
         gap: 2rem;
-        @media (max-width: $md) {
+        @media (max-width: $lg) {
             padding: 1rem 0;
         }
     }
@@ -14,7 +14,7 @@
         display: flex;
         align-items: stretch;
         gap: 1.5rem;
-        @media (max-width: $md) {
+        @media (max-width: $lg) {
             gap: .5rem;
         }
         li {
@@ -32,13 +32,14 @@
                 transition-duration: .15s;
                 svg {
                     fill: $highlight-color-blue;
+                    flex-shrink: 0;
                     transition-duration: .15s;
                 }
                 &:hover {
                     color: $highlight-color-blue;
                 }
             }
-            @media (max-width: $md) {
+            @media (max-width: $lg) {
                 border: 0;
                 padding: 0;
                 a {

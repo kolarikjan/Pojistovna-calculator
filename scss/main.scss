@@ -1,5 +1,5 @@
 /* 
-Theme name: Starfishing
+Theme name: Hasičská vzájemná pojišťovna
 Author: Jan Kolařík
 Author's url: www.kolarikjan.cz
 */
@@ -37,4 +37,64 @@ body {
     .container {
         max-width: 1424px;
     }
+}
+@media (min-width: $xxxl) {
+    .container {
+        max-width: 1875px;
+    }
+}
+.ui-datepicker .ui-datepicker-header {
+    background: $highlight-color-blue;
+    border-color: $highlight-color-blue;
+    border-radius: 0 !important;
+}
+.ui-widget-content {
+    background: $secondary-color !important;
+}
+.ui-state-hover, .ui-widget-content .ui-state-hover {
+    color: $highlight-color-blue !important;
+    border-color: $highlight-color-blue !important;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+    background: $section-color-blue !important;
+    border-color: $section-color-blue !important;
+    color: $highlight-color-blue !important;
+}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+    border-color: $highlight-color-blue !important;
+    background: $section-color-blue !important;
+    color: $highlight-color-blue !important;
+}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+    color: $secondary-color !important;
+    border-color: $highlight-color-red !important;
+    background: $highlight-color-red !important;
+}
+.ui-widget.ui-widget-content {
+    margin-top: .5rem;
+    border: 1px solid lighten($highlight-color-blue, 55%) !important;
+    border-radius: 0 !important;
+    filter: drop-shadow(2.677px 2.973px 4.5px rgba(208, 229, 240, 0.5));
+}
+.ui-datepicker .ui-datepicker-title select {
+    background-color: $secondary-color;
+    border: 0;
+    margin: 1px !important;
+    color: $highlight-color-blue;
+    box-shadow: none;
+}
+.ui-widget-header .ui-icon {
+    background-image: url("https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/images/ui-icons_ffffff_256x240.png") !important;
+}
+.ui-state-hover.ui-datepicker-next, .ui-state-hover.ui-datepicker-prev {
+    background: $highlight-color-blue !important;
+    cursor: pointer;
+}
+.ui-state-hover.ui-datepicker-next {
+    top: 2px !important;
+    right: 2px !important;
+}
+.ui-state-hover.ui-datepicker-prev {
+    top: 2px !important;
+    left: 2px !important;
 }

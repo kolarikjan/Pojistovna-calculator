@@ -8,22 +8,20 @@
         }
     }
     &-perPage {
-        background-color: $section-color-blue;
-        border-radius: 2.5rem;
-        padding: 1rem 2.5rem;
         @include flexCenter();
         flex-wrap: wrap;
         gap: .25rem 1rem;
         ul {
             @include flexCenter();
             font-weight: 700;
-            font-size: rem(16);
+            font-size: rem(15);
             line-height: rem(22);
             li {
                 &:not(:last-child) {
                     &::after {
                         padding: 0 .35rem 0 .2rem;
                         content: "|";
+                        font-weight: 500;
                     }
                 }
                 a {
@@ -40,24 +38,35 @@
     &-pages {
         ul {
             @include flexCenter();
-            gap: .5rem;
             a {
-                width: rem(29);
-                line-height: rem(28);
-                aspect-ratio: 1/1;
-                @include flexCenter();
-                border: rem(1) solid $border-color;
+                font-size: rem(15);
+                font-weight: 500;
+                line-height: rem(29);
                 transition-duration: .15s;
                 color: $primary-color;
-                border-radius: 50%;
                 text-decoration: none;
                 &:hover, &.active {
-                    border-color: $section-color-blue;
-                    background-color: $section-color-blue;
+                    color: $highlight-color-blue;
                 }
                 &.arrow {
+                    @include flexCenter();
+                    width: rem(29);
+                    line-height: rem(28);
+                    aspect-ratio: 1/1;
+                    border-radius: 50%;
+                    border: rem(1) solid $border-color;
                     border-color: $highlight-color-blue;
                     background-color: $highlight-color-blue;
+                    margin: 0 .8rem;
+                }
+            }
+            li {
+                &.num:not(:last-child) {
+                    &::after {
+                        padding: 0 .5rem 0;
+                        content: "|";
+                        font-weight: 500;
+                    }
                 }
             }
             li:first-child {

@@ -3,14 +3,22 @@
     line-height: rem(22);
     color: $secondary-color;
     font-weight: 700;
-    padding: 1rem 1.75rem;
+    padding: .4rem 1.25rem;
+    min-height: rem(40);
     @include flexCenter();
     gap: .75rem;
-    border-radius: rem(100);
+    border-radius: $button-radius;
     text-decoration: none !important;
     border: rem(2) solid transparent;
     transition-duration: .15s;
     width: fit-content;
+    &-small {
+        padding: .5rem 1.25rem;  
+        gap: 0.25rem;
+        svg {
+            width: rem(21);
+        }
+    }
     svg {
         transition-duration: .15s;
         fill: $secondary-color;
@@ -35,6 +43,17 @@
             }
             background-color: $secondary-color;
             color: $highlight-color-blue;
+        }
+    }
+    &-dark {
+        background-color: #626262;
+        border-color: #626262;
+        &:hover {
+            svg {
+                fill: #626262;
+            }
+            background-color: $secondary-color;
+            color: #626262;
         }
     }
 }
