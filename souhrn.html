@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <!-- DEFAULTS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HVP | Vytvoření kalkulace</title>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/ico">
+    <!-- STYLE -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/fancybox.css"> 
+    <link rel="stylesheet" href="scss/main.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="body">
+        <section class="section ignore-first">
+            <div class="container">
+                <div class="section-header has-button">
+                    <h1>Kalkulace pojištění</h1>
+                    <a href="/contracts/new/?lang=cs" class="button button-red">
+                        <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22" width="22" height="22"><path id="-e-icon-new" fill-rule="evenodd" class="s0" d="m0 4.6l4.5-4.6h11.2v7h-2v-5h-6.8v5h-4.9v13h3.9v2h-5.9zm2.4 0.4h2.5v-2.6zm15.3 2.6l4.3 4.4-9.8 10h-4.3v-4.4zm-6.3 12.4l-1.6-1.6v1.6zm7.9-8l-1.6-1.6-6.4 6.6 1.5 1.6z"></path></svg>
+                        Vytvořit novou kalkulaci
+                    </a>
+                </div>
+                <div class="section-body">
+                    <form action="/smlouvy" method="post" id="frm-searchCalculationForm" class="form">
+                        <div class="form-inner">
+                            <div class="form-search2">
+                                <div class="form-search2-inputs">
+                                    <div class="form-search2-inputs-inner person-ico">
+                                        <input type="text" name="input" id="input" placeholder="Pojistník">
+                                        <input type="text" name="input" id="input" placeholder="IČO">
+                                    </div>
+                                    <div class="form-search2-inputs-inner person-ico">
+                                        <input type="text" name="input" id="input" placeholder="Pojištěný">
+                                        <input type="text" name="input" id="input" placeholder="IČO">
+                                    </div>
+                                    <div class="form-search2-inputs-inner person-ico">
+                                        <input type="text" name="input" id="input" placeholder="Pojistník">
+                                        <input type="text" name="input" id="input" placeholder="IČO">
+                                    </div>
+                                </div>
+                                <div class="form-search2-bottom">
+                                    <div class="form-search2-bottom-inputs">
+                                        <label class="form-checkboxrow gap-1 mx-xl-2">
+                                            <input type="checkbox" class="me-1">
+                                            Rekapitulace
+                                        </label>
+                                        <label class="form-checkboxrow gap-1 mx-xl-2">
+                                            <input type="checkbox" class="me-1">
+                                            s rozpadem po předmětech pojištění
+                                        </label>
+                                        <label class="form-checkboxrow gap-1 mx-xl-2">
+                                            <input type="checkbox" class="me-1">
+                                            Seznam pojištěných vozidel a rozsah pojištění
+                                        </label>
+                                    </div>
+                                    <div class="form-search2-bottom-buttons">
+                                        <button type="submit" class="button button-blue">
+                                            Odeslat na email
+                                        </button>
+                                        <button type="submit" class="button button-dark">
+                                            Uložit do PDF
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="total">
+                    <div class="total-sidebar">
+                        <button>
+                            <img src="img/total-subrows.svg" alt="subrows">
+                        </button>
+                    </div>
+                    <div class="total-main">
+                        <div class="total-header">
+                            <h3>Rekapitulace</h3>
+                        </div>
+                        <div class="total-content">
+                            <div class="total-table">
+                                <div class="total-table-row row-header">
+                                    <div class="total-table-col darken">
+                                        Předmět pojištění
+                                    </div>
+                                    <div class="total-table-col darken">
+                                        Pojištěno vozidel
+                                    </div>
+                                    <div class="total-table-col darken">
+                                        Roční pojistné
+                                    </div>
+                                    <div class="total-table-col darken">
+                                        Výše slevy (-)  přirážky (+)
+                                    </div>
+                                    <div class="total-table-col darken">
+                                        Roční pojistné po slevě/přirážce
+                                    </div>
+                                </div>
+                                <div class="total-table-row">
+                                    <div class="total-table-col darken">
+                                        Pojištění odpovědnosti za škodu z provozu vozidla (POV)
+                                    </div>
+                                    <div class="total-table-col" data-title="Pojištěno vozidel: ">
+                                        45
+                                    </div>
+                                    <div class="total-table-col" data-title="Roční pojistné: ">
+                                        225 000 Kč
+                                    </div>
+                                    <div class="total-table-col" data-title="Výše slevy (-)  přirážky (+): ">
+                                        -90 000 Kč
+                                    </div>
+                                    <div class="total-table-col" data-title="Roční pojistné po slevě/přirážce: ">
+                                        135 000 Kč
+                                    </div>
+                                </div>
+                                <div class="total-table-row has-subrows">
+                                    <a href="" class="total-table-row-toggler" data-target="0">
+                                        <img src="img/total-subrows.svg" alt="subrows">
+                                    </a>
+                                    <div class="total-table-col darken has-subrows-title">
+                                        Havarijní pojištění (HAV)
+                                    </div>
+                                    <div class="total-table-col" data-title="Pojištěno vozidel: ">
+                                        45
+                                    </div>
+                                    <div class="total-table-col" data-title="Roční pojistné: ">
+                                        225 000 Kč
+                                    </div>
+                                    <div class="total-table-col" data-title="Výše slevy (-)  přirážky (+): ">
+                                        -90 000 Kč
+                                    </div>
+                                    <div class="total-table-col" data-title="Roční pojistné po slevě/přirážce: ">
+                                        135 000 Kč
+                                    </div>
+                                </div>
+                                <div class="total-table-row subrow" data-id="0">
+                                    <div class="total-table-col subrow-first">
+                                        <p>z toho:</p>
+                                        <div class="darken">
+                                            základní asistence
+                                        </div>
+                                    </div>
+                                    <div class="total-table-col" data-title="Pojištěno vozidel: ">
+                                        45
+                                    </div>
+                                    <div class="total-table-col" data-title="Roční pojistné: ">
+                                        225 000 Kč
+                                    </div>
+                                    <div class="total-table-col" data-title="Výše slevy (-)  přirážky (+): ">
+                                        -90 000 Kč
+                                    </div>
+                                    <div class="total-table-col" data-title="Roční pojistné po slevě/přirážce: ">
+                                        135 000 Kč
+                                    </div>
+                                </div>
+                                <div class="total-table-row subrow" data-id="0">
+                                    <div class="total-table-col subrow-first">
+                                        <p></p>
+                                        <div class="darken">
+                                            rozšířené asistence
+                                        </div>
+                                    </div>
+                                    <div class="total-table-col" data-title="Pojištěno vozidel: ">
+                                        45
+                                    </div>
+                                    <div class="total-table-col" data-title="Roční pojistné: ">
+                                        225 000 Kč
+                                    </div>
+                                    <div class="total-table-col" data-title="Výše slevy (-)  přirážky (+): ">
+                                        -90 000 Kč
+                                    </div>
+                                    <div class="total-table-col" data-title="Roční pojistné po slevě/přirážce: ">
+                                        135 000 Kč
+                                    </div>
+                                </div>
+                                <div class="total-table-row has-subrows">
+                                    <a href="" class="total-table-row-toggler" data-target="1">
+                                        <img src="img/total-subrows.svg" alt="subrows">
+                                    </a>
+                                    <div class="total-table-col darken has-subrows-title">
+                                        Dodatková ppojištění (DOD)
+                                    </div>
+                                    <div class="total-table-col" data-title="Pojištěno vozidel: ">
+                                        45
+                                    </div>
+                                    <div class="total-table-col" data-title="Roční pojistné: ">
+                                        225 000 Kč
+                                    </div>
+                                    <div class="total-table-col" data-title="Výše slevy (-)  přirážky (+): ">
+                                        -90 000 Kč
+                                    </div>
+                                    <div class="total-table-col" data-title="Roční pojistné po slevě/přirážce: ">
+                                        135 000 Kč
+                                    </div>
+                                </div>
+                                <div class="total-table-row subrow" data-id="1">
+                                    <div class="total-table-col subrow-first">
+                                        <p>z toho:</p>
+                                        <div class="darken">
+                                            pojištění skel
+                                        </div>
+                                    </div>
+                                    <div class="total-table-col" data-title="Pojištěno vozidel: ">
+                                        45
+                                    </div>
+                                    <div class="total-table-col" data-title="Roční pojistné: ">
+                                        225 000 Kč
+                                    </div>
+                                    <div class="total-table-col" data-title="Výše slevy (-)  přirážky (+): ">
+                                        -90 000 Kč
+                                    </div>
+                                    <div class="total-table-col" data-title="Roční pojistné po slevě/přirážce: ">
+                                        135 000 Kč
+                                    </div>
+                                </div>
+                                <div class="total-table-row subrow" data-id="1">
+                                    <div class="total-table-col subrow-first">
+                                        <p></p>
+                                        <div class="darken">
+                                            pojištění náhradního vozidla
+                                        </div>
+                                    </div>
+                                    <div class="total-table-col" data-title="Pojištěno vozidel: ">
+                                        45
+                                    </div>
+                                    <div class="total-table-col" data-title="Roční pojistné: ">
+                                        225 000 Kč
+                                    </div>
+                                    <div class="total-table-col" data-title="Výše slevy (-)  přirážky (+): ">
+                                        -90 000 Kč
+                                    </div>
+                                    <div class="total-table-col" data-title="Roční pojistné po slevě/přirážce: ">
+                                        135 000 Kč
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="total-skeleton table-grid total-skeleton-mt">
+                                <div class="total-skeleton-box"></div>
+                                <div class="total-skeleton-box">
+                                    <label class="total-skeleton-item">
+                                        <p class="ms-xxl-5">Frekvence placení</p>
+                                        <select>
+                                            <option selected>čtvrtletní</option>
+                                        </select>
+                                    </label>
+                                </div>
+                                <div class="total-skeleton-box">
+                                    <label class="total-skeleton-item">
+                                        <p>Celkové roční pojistné</p>
+                                        <input type="text" value="135 000 Kč">
+                                    </label>
+                                    <label class="total-skeleton-item">
+                                        <p>Upravené roční pojistné</p>
+                                        <input type="text" value="135 000 Kč">
+                                    </label>
+                                    <label class="total-skeleton-item">
+                                        <p>Lhůtní pojistné</p>
+                                        <input type="text" value="135 000 Kč">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="total-divider"></div>
+                            <div class="total-skeleton">
+                                <div class="total-skeleton-box">
+                                    <label class="total-skeleton-item">
+                                        <p>Číslo kalkulace</p>
+                                        <select>
+                                            <option selected>čtvrtletní</option>
+                                        </select>
+                                    </label>
+                                    <label class="total-skeleton-item">
+                                        <p>Kalkulaci vypracoval</p>
+                                        <select>
+                                            <option selected>Ing. Petr Novák</option>
+                                        </select>
+                                    </label>
+                                </div>
+                                <div class="total-skeleton-box">
+                                    <label class="total-skeleton-item">
+                                        <p>Vypracována dne</p>
+                                        <input type="text" value="07.08.2024" class="datepicker">
+                                    </label>
+                                    <label class="total-skeleton-item">
+                                        <p>Mobil</p>
+                                        <input type="text" value="123 456 789">
+                                    </label>
+                                </div>
+                                <div class="total-skeleton-box">
+                                    <label class="total-skeleton-item">
+                                        <p>Platnost kalkulace do</p>
+                                        <input type="text" value="05.09.2024">
+                                    </label>
+                                    <label class="total-skeleton-item">
+                                        <p>Email</p>
+                                        <input type="text" value="jmeno.prijmeni@email.cz">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section pt-0">
+            <div class="container">
+                <div class="total">
+                    <div class="total-sidebar">
+                        <button>
+                            <img src="img/total-subrows.svg" alt="subrows">
+                        </button>
+                    </div>
+                    <div class="total-main">
+                        <div class="total-header">
+                            <h3>Rekapitulace</h3>
+                        </div>
+                        <div class="total-content">
+                            <div class="total-vehicles">
+                                <div class="total-vehicles-header">
+                                    <div class="total-vehicles-header-col">
+                                        Vozidlo
+                                    </div>
+                                    <div class="total-vehicles-header-col">
+                                        Pojistné
+                                    </div>
+                                </div>
+                                <div class="total-vehicles-row row-header">
+                                    <div class="total-vehicles-col darken">
+                                        Poř. číslo
+                                    </div>
+                                    <div class="total-vehicles-col darken">
+                                        RZ/SPZ
+                                    </div>
+                                    <div class="total-vehicles-col darken">
+                                        Značka
+                                    </div>
+                                    <div class="total-vehicles-col darken">
+                                        Model
+                                    </div>
+                                    <div class="total-vehicles-col darken">
+                                        Předmět pojištění
+                                    </div>
+                                    <div class="total-vehicles-col darken">
+                                        POV
+                                    </div>
+                                    <div class="total-vehicles-col darken">
+                                        HAV
+                                    </div>
+                                    <div class="total-vehicles-col darken">
+                                        Dodatková pojištění
+                                    </div>
+                                    <div class="total-vehicles-col darken">
+                                        Asistence
+                                    </div>
+                                    <div class="total-vehicles-col darken">
+                                        CELKEM
+                                    </div>
+                                </div>
+                                <div class="total-vehicles-row">
+                                    <div class="total-vehicles-col" data-title="Poř. číslo: ">
+                                        001
+                                    </div>
+                                    <div class="total-vehicles-col" data-title="RZ/SPZ: ">
+                                        1123456
+                                    </div>
+                                    <div class="total-vehicles-col" data-title="Značka: ">
+                                        Suzuki
+                                    </div>
+                                    <div class="total-vehicles-col" data-title="Model: ">
+                                        S-cross
+                                    </div>
+                                    <div class="total-vehicles-col" data-title="Předmět pojištění: ">
+                                        Roční pojistné
+                                    </div>
+                                    <div class="total-vehicles-col" data-title="POV: ">
+                                        5000 Kč
+                                    </div>
+                                    <div class="total-vehicles-col" data-title="HAV: ">
+                                        8000 Kč
+                                    </div>
+                                    <div class="total-vehicles-col" data-title="Dodatková pojištění: ">
+                                        2650 Kč
+                                    </div>
+                                    <div class="total-vehicles-col" data-title="Asistence: ">
+                                        565 Kč
+                                    </div>
+                                    <div class="total-vehicles-col total" data-title="Celkem: ">
+                                        16 225 Kč
+                                    </div>
+                                </div>
+                                <div class="total-vehicles-row">
+                                    <div class="total-vehicles-col" data-title="Poř. číslo: ">
+                                        001
+                                    </div>
+                                    <div class="total-vehicles-col" data-title="RZ/SPZ: ">
+                                        1123456
+                                    </div>
+                                    <div class="total-vehicles-col" data-title="Značka: ">
+                                        Suzuki
+                                    </div>
+                                    <div class="total-vehicles-col" data-title="Model: ">
+                                        S-cross
+                                    </div>
+                                    <div class="total-vehicles-col" data-title="Předmět pojištění: ">
+                                        Roční pojistné
+                                    </div>
+                                    <div class="total-vehicles-col" data-title="POV: ">
+                                        5000 Kč
+                                    </div>
+                                    <div class="total-vehicles-col" data-title="HAV: ">
+                                        8000 Kč
+                                    </div>
+                                    <div class="total-vehicles-col" data-title="Dodatková pojištění: ">
+                                        2650 Kč
+                                    </div>
+                                    <div class="total-vehicles-col" data-title="Asistence: ">
+                                        565 Kč
+                                    </div>
+                                    <div class="total-vehicles-col total" data-title="Celkem: ">
+                                        16 225 Kč
+                                    </div>
+                                </div>
+                                <div class="total-vehicles-row">
+                                    <div class="total-vehicles-col" data-title="Poř. číslo: ">
+                                        001
+                                    </div>
+                                    <div class="total-vehicles-col" data-title="RZ/SPZ: ">
+                                        1123456
+                                    </div>
+                                    <div class="total-vehicles-col" data-title="Značka: ">
+                                        Suzuki
+                                    </div>
+                                    <div class="total-vehicles-col" data-title="Model: ">
+                                        S-cross
+                                    </div>
+                                    <div class="total-vehicles-col" data-title="Předmět pojištění: ">
+                                        Roční pojistné
+                                    </div>
+                                    <div class="total-vehicles-col" data-title="POV: ">
+                                        5000 Kč
+                                    </div>
+                                    <div class="total-vehicles-col" data-title="HAV: ">
+                                        8000 Kč
+                                    </div>
+                                    <div class="total-vehicles-col" data-title="Dodatková pojištění: ">
+                                        2650 Kč
+                                    </div>
+                                    <div class="total-vehicles-col" data-title="Asistence: ">
+                                        565 Kč
+                                    </div>
+                                    <div class="total-vehicles-col total" data-title="Celkem: ">
+                                        16 225 Kč
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/fancybox.umd.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/javascript.js"></script>
+
+</body>
+</html>

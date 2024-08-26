@@ -1,0 +1,7 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" width="15" height="15">
+	<title>-e-total-calendar</title>
+	<style>
+		.s0 { fill: #626262 } 
+	</style>
+	<path id="-e-total-calendar" class="s0" d="m15 1.3h-2.7v-1.3h-1.3v4h1.3v-1.3h1.4v10.7h-12.1v-10.7h0.7v-1.4h-2v13.4h14.7zm-10.7-1.3h-1.3v4h1.3v-1.4h6v-1.3h-6zm2.7 5.3h-1.4v1.4h1.4zm2.7 0h-1.4v1.3h1.4zm2.6 0h-1.3v1.4h1.3zm-8 2.6h-1.3v1.4h1.3zm2.7 0h-1.4v1.3h1.4zm2.7 0h-1.4v1.3h1.4zm2.6 0h-1.3v1.4h1.3zm-9.3 4h1.3v-1.4h-1.3zm2.6 0h1.4v-1.3h-1.4zm2.7 0h1.4v-1.3h-1.4zm2.7 0h1.3v-1.4h-1.3z"/>
+</svg>
